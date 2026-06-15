@@ -1,0 +1,109 @@
+Section 1: What are Large Language Models (LLMs)
+
+Large Language Models (LLMs) are advanced artificial intelligence systems designed to understand, process, and generate human language. They are trained on extremely large datasets that include books, websites, articles, and other text sources. By learning patterns in this data, LLMs can generate meaningful and contextually relevant responses.
+
+Unlike traditional programs, LLMs are not explicitly programmed with rules. Instead, they learn statistical relationships between words and phrases. When given an input, they predict the most likely sequence of words that should follow.
+
+Popular examples include models developed by OpenAI, Meta, and Mistral AI.
+
+A key point to understand is that LLMs do not possess true understanding or consciousness. They operate purely based on probability and patterns learned during training.
+
+Section 2: How LLMs Work (Basic Concept)
+
+At a fundamental level, LLMs work by predicting the next token in a sequence. A token can be a word, part of a word, or even punctuation. This process is repeated again and again to generate full sentences and paragraphs.
+
+When a user inputs a query, the model first converts the text into tokens. These tokens are then transformed into numerical representations called embeddings. The model processes these embeddings through multiple layers and predicts the probability of the next token.
+
+This process is iterative. Each generated token is fed back into the model as input, allowing it to build coherent responses over time.
+
+This is why LLMs are often described as "next-token prediction machines."
+
+Section 3: Transformer Architecture
+
+LLMs are built using a deep learning architecture known as the Transformer. This architecture was introduced in the research paper "Attention is All You Need" and revolutionized natural language processing.
+
+The most important component of a Transformer is the attention mechanism. Attention allows the model to focus on relevant parts of the input while generating output. For example, when processing a sentence, the model can determine which words are important for understanding context.
+
+Transformers also use positional encoding to maintain the order of words, since the architecture processes input in parallel rather than sequentially.
+
+Another important part is the feedforward neural network, which helps the model learn complex patterns and relationships.
+
+The Transformer architecture enables LLMs to handle long text efficiently and generate high-quality responses.
+
+Section 4: Tokens and Tokenization
+
+LLMs do not process raw text directly. Instead, they break text into smaller units called tokens. Tokenization is the process of converting text into these units.
+
+For example:
+"Artificial Intelligence is powerful" may be split into tokens like:
+["Artificial", " Intelligence", " is", " powerful"]
+
+Most modern models use subword tokenization techniques such as Byte Pair Encoding (BPE) or SentencePiece. These methods help handle unknown words and reduce vocabulary size.
+
+Each token is then mapped to a numerical ID and converted into an embedding vector, which the model can understand.
+
+Token limits are very important in LLMs. Each model has a maximum context window (for example, 8k or 32k tokens). If the input exceeds this limit, some information may be truncated.
+
+Section 5: Training Process of LLMs
+
+The training of LLMs happens in multiple stages and requires massive computational resources.
+
+The first stage is pretraining. In this phase, the model is trained on a large corpus of text data using self-supervised learning. The objective is typically to predict the next token in a sequence.
+
+After pretraining, the model undergoes fine-tuning. This stage improves the model’s usefulness and safety. Fine-tuning may include supervised learning with labeled data and reinforcement learning from human feedback (RLHF).
+
+RLHF involves humans ranking model responses, which helps align the model with human expectations and improve its behavior.
+
+The final result is a model that is more accurate, helpful, and aligned with user needs.
+
+Section 6: Limitations of LLMs
+
+Despite their capabilities, LLMs have several limitations that developers must be aware of.
+
+One major issue is hallucination. This occurs when the model generates information that appears correct but is actually false. Since LLMs rely on probabilities rather than verified knowledge, they can produce incorrect answers confidently.
+
+Another limitation is the lack of real-time knowledge. Unless connected to external systems, LLMs only know information up to their training cutoff.
+
+LLMs are also sensitive to prompt design. Small changes in input wording can lead to very different outputs.
+
+Additionally, they have a limited context window, meaning they cannot remember unlimited information in a single interaction.
+
+Understanding these limitations is crucial when building applications like RAG systems.
+
+Section 7: What is Retrieval-Augmented Generation (RAG)
+
+Retrieval-Augmented Generation (RAG) is a technique used to improve the performance of LLMs by integrating them with external data sources.
+
+Instead of relying only on internal knowledge, a RAG system retrieves relevant documents from a database and provides them as context to the model.
+
+The typical flow is:
+
+User submits a query
+System searches for relevant documents
+Retrieved data is added to the prompt
+LLM generates a response based on both the query and the retrieved context
+
+This approach significantly reduces hallucinations and improves accuracy.
+
+RAG is especially useful for applications that require up-to-date or domain-specific knowledge, such as chatbots, document search systems, and enterprise AI tools.
+
+Section 8: LLM Components in a RAG Project
+
+A complete RAG system consists of multiple components working together.
+
+The first step is data ingestion, where documents such as PDFs, text files, or web data are collected.
+
+Next is chunking, where large documents are divided into smaller pieces to make retrieval more efficient.
+
+These chunks are then converted into embeddings using embedding models. Embeddings are numerical representations of text that capture semantic meaning.
+
+The embeddings are stored in a vector database such as FAISS or Pinecone.
+
+When a query is received, the retriever searches the vector database to find the most relevant chunks.
+
+These chunks are then passed into a prompt template along with the user’s query.
+
+Finally, the LLM generates a response using this enriched context.
+
+In summary:
+RAG = Retrieval System + LLM + Prompt Engineering
