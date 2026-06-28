@@ -153,13 +153,8 @@ http://localhost:8501
 
 ## 📸 Demo
 
-Add screenshots or GIFs here.
+![Uploading image.png…]()
 
-```markdown
-![Application Screenshot](images/demo.png)
-```
-
----
 
 ## 🔮 Future Improvements
 
