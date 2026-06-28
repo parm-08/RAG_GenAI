@@ -1,0 +1,65 @@
+# =========================
+# LangChain Ecosystem
+# =========================
+langchain
+langchain-core
+langchain-community
+langchain-huggingface
+langchain-mistralai
+langchain-openai
+
+# =========================
+# LLM / API
+# =========================
+mistralai
+python-dotenv
+
+# =========================
+# =========================
+# Embeddings & Transformers
+# =========================
+sentence-transformers
+transformers
+huggingface-hub
+torchvision
+
+# =========================
+# Vector Databases
+# =========================
+chromadb
+faiss-cpu
+
+# =========================
+# Document Loaders
+# =========================
+pypdf
+python-docx
+unstructured
+
+# =========================
+# Tokenization
+# =========================
+tiktoken
+
+# =========================
+# Backend / APIs
+# =========================
+fastapi
+uvicorn
+
+# =========================
+# Data Handling
+# =========================
+numpy
+pandas
+scikit-learn
+
+# =========================
+# Frontend / UI
+# =========================
+streamlit
+
+# =========================
+# Research Retriever
+# =========================
+arxiv
