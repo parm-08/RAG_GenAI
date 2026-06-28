@@ -1,0 +1,20 @@
+# Virtual environments
+venv/
+.venv/
+
+# Environment variables
+.env
+
+# ChromaDB / Vector DB
+Vector_stores/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Streamlit cache
+.streamlit/
+
+# OS files
+.DS_Store
+Thumbs.db
